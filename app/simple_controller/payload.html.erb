@@ -1,0 +1,19 @@
+<h1><%= @payload["title"] %></h1>
+<p>
+  <%= @payload["overview"] %>
+</p>
+<img src="https:<%= @payload["photo"]["image_url"] %>" width="200px" height="200px"/>
+<ul>
+<%  @payload["recipe_ingredient_groups"].each do |i_group| %>
+  <li>
+    <ul>
+      <%  i_group["recipe_ingredients"].each do |r_ingredient| %>
+        <li><%= r_ingredient["ingredient"]["name"] %></li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+
+<h1>super mario bros</h1>
